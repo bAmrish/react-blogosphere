@@ -1,0 +1,6 @@
+.Posts {
+    display: flex;
+    margin: 10px 0;
+    justify-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,60 @@
+.NewPost {
+    border: 1px solid #eee;
+    box-shadow: 2px 3px #999;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .NewPost .title {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .NewPost .form-row {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .NewPost .form-row label{
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  .NewPost .form-row .postTitle,
+  .NewPost .form-row .content,
+  .NewPost .form-row .author
+  {
+   width: 100%;
+  }
+  
+  .NewPost .postTitle {
+    font-family: Courgette;
+    font-size: 2rem;
+  }
+  
+  .NewPost .form-row .content {
+    min-height: 200px;
+    font-family: 'Overclock', cursive;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+  }
+
+  .NewPost .form-row:last-of-type {
+    align-items: center;
+  }
+
+  .submitButton {
+    width: 200px;
+  }
