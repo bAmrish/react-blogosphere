@@ -11,6 +11,8 @@
   .Post .postTitle{
     font-family: Courgette;
     text-align: left;
+    color: rgb(10, 10, 105);
+    cursor: pointer;
   }
   
   .Post .author {

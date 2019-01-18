@@ -3,12 +3,23 @@ import classes from './Posts.module.css';
 
 import Post from './Post/Post';
 
-const posts = () => {
+const posts = (props) => {
+    let posts = 'Loading...'
+    if(props.posts){
+        posts = props.posts.map(post => {
+            return(
+                <Post key={post.id} 
+                    title={post.title} 
+                    author={post.author} 
+                    clicked ={() => props.postClicked(post)}
+                    />
+            );
+        });
+
+    }
     return(
         <div className={classes.Posts}>
-            <Post title="The Life as it ought to be!" author="Amrish" />
-            <Post title="The Life as you ought to live" author="Aarushi" />
-            <Post title="The Life" author="Anishka" />        
+            {posts}            
         </div>
     )
 }
