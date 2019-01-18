@@ -26,12 +26,20 @@ class Blog extends Component {
             })
     }
 
+    deletePostHandler = (post) => {
+        axios.delete(`https://jsonplaceholder.typicode.com/posts/${post.id}`)
+        .then((response) => {
+            console.log(response);
+        })
+    }
+
     render(){
         return(
             <div className={classes.Blog}>
                 <h1 className={classes.title}>My Blogs</h1>
                 <Posts posts={this.state.posts} postClicked={this.selectedPostHandler}/>
-                <FullPost post={this.state.selectedPost}/>
+                <FullPost post={this.state.selectedPost}
+                    deleted={() => {this.deletePostHandler(this.state.selectedPost)}}/>
                 <NewPost />
             </div>
         )
