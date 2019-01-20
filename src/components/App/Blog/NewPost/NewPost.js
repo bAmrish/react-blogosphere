@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import classes from './NewPost.module.css';
-import axios from 'axios';
+import axios from '../../../../axios';
 
 class NewPost extends Component {
   state = {
@@ -23,7 +23,7 @@ class NewPost extends Component {
 
   formSubmitHandler = () => {
     console.log(this.state);
-    axios.post('https://jsonplaceholder.typicode.com/posts', this.state)
+    axios.post('/posts', this.state)
       .then( (response) => {
         console.log(response);
       });

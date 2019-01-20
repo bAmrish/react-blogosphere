@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import classes from './Blog.module.css';
-import axios from 'axios';
+import axios from '../../../axios';
 
 import Posts from './Posts/Posts';
 import FullPost from './FullPost/FullPost';
@@ -13,21 +13,21 @@ class Blog extends Component {
     };
 
     componentWillMount(){
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('/posts')
             .then((response) => {
                 this.setState({posts: response.data.slice(0, 4)});
             })
     }
 
     selectedPostHandler = (post) =>{
-        axios.get(`https://jsonplaceholder.typicode.com/posts/${post.id}`)
+        axios.get(`/posts/${post.id}`)
             .then((response) => {
                 this.setState({selectedPost: response.data});
             })
     }
 
     deletePostHandler = (post) => {
-        axios.delete(`https://jsonplaceholder.typicode.com/posts/${post.id}`)
+        axios.delete(`/posts/${post.id}`)
         .then((response) => {
             console.log(response);
         })
