@@ -26,6 +26,7 @@ class NewPost extends Component {
     axios.post('/posts', this.state)
       .then( (response) => {
         console.log(response);
+        this.props.history.push('/posts');
       });
   }
 

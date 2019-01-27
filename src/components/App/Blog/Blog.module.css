@@ -7,6 +7,31 @@
     text-align: center;
 }
 
+.Blog ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px;
+}
+
+.Blog ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.Blog ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.Blog ul li a:active, 
+.Blog ul li a:hover {
+    color: rgb(235, 145, 27);
+}
+
+.Blog ul li a.active {
+    border-bottom: 3px solid rgb(235, 145, 27);
+}
+
 @media(min-width: 500px) {
     .Blog {
         width: 60%;
